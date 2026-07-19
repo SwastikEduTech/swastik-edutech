@@ -1,11 +1,11 @@
 "use client";
-
+import { whatsappOrder } from "../lib/whatsapp";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 overflow-hidden bg-gradient-to-b from-black via-zinc-950 to-black">
+    <section id="home" className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 overflow-hidden bg-gradient-to-b from-black via-zinc-950 to-black">
       <div className="absolute w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl top-20 left-1/2 -translate-x-1/2"></div>
 
       <motion.div
@@ -39,12 +39,13 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
-            href="https://wa.me/919725444653"
-            target="_blank"
-            className="bg-green-600 hover:bg-green-500 px-8 py-4 rounded-xl font-bold transition duration-300"
-          >
-            WhatsApp Now
-          </a>
+  href={whatsappOrder("General Inquiry")}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-green-600 hover:bg-green-500 px-8 py-4 rounded-xl font-bold transition duration-300"
+>
+  WhatsApp Now
+</a>
 
           <a
             href="#services"

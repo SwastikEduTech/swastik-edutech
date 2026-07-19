@@ -6,6 +6,46 @@ import {
   FileEdit,
   Printer,
 } from "lucide-react";
+import { whatsappOrder } from "../lib/whatsapp";
+
+const services = [
+  {
+    icon: FileText,
+    title: "Resume / CV Design",
+    description: "ATS-friendly resumes for jobs, internships and colleges.",
+    service: "Resume / CV Design",
+  },
+  {
+    icon: Presentation,
+    title: "PowerPoint Presentations",
+    description: "Attractive presentations for school, college and business.",
+    service: "PowerPoint Presentation",
+  },
+  {
+    icon: Globe,
+    title: "Website Development",
+    description: "Personal, portfolio and business websites.",
+    service: "Website Development",
+  },
+  {
+    icon: Palette,
+    title: "Graphic & Logo Design",
+    description: "Logos, posters, banners and social media designs.",
+    service: "Graphic & Logo Design",
+  },
+  {
+    icon: FileEdit,
+    title: "PDF Editing & Typing",
+    description: "PDF editing, formatting and typing work.",
+    service: "PDF Editing & Typing",
+  },
+  {
+    icon: Printer,
+    title: "Printing & Spiral Binding",
+    description: "Printing, spiral binding and project preparation.",
+    service: "Printing & Spiral Binding",
+  },
+];
 
 export default function Services() {
   return (
@@ -21,72 +61,37 @@ export default function Services() {
         Everything students need in one place.
       </p>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.15)] transition-all duration-300">
+        {services.map((item, index) => {
+          const Icon = item.icon;
 
-            <FileText size={40} className="text-yellow-400 mb-4" />
+          return (
+            <div
+              key={index}
+              className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.15)] transition-all duration-300"
+            >
+              <Icon size={42} className="text-yellow-400 mb-5" />
 
-          <h3 className="text-2xl font-bold text-yellow-400">
-            Resume / CV Design
-          </h3>
-          <p className="mt-3 text-gray-400">
-            ATS-friendly resumes for jobs, internships and colleges.
-          </p>
-        </div>
+              <h3 className="text-2xl font-bold text-yellow-400">
+                {item.title}
+              </h3>
 
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.15)] transition-all duration-300">
-            <Presentation size={40} className="text-yellow-400 mb-4" />
-            
-          <h3 className="text-2xl font-bold text-yellow-400">
-            PowerPoint Presentations
-          </h3>
-          <p className="mt-3 text-gray-400">
-            Attractive presentations for school, college and business.
-          </p>
-        </div>
+              <p className="mt-3 text-gray-400">
+                {item.description}
+              </p>
 
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.15)] transition-all duration-300">
-            <Globe size={40} className="text-yellow-400 mb-4" />
-
-          <h3 className="text-2xl font-bold text-yellow-400">
-            Website Development
-          </h3>
-          <p className="mt-3 text-gray-400">
-            Personal, portfolio and business websites.
-          </p>
-        </div>
-
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.15)] transition-all duration-300">
-            <Palette size={40} className="text-yellow-400 mb-4" />
-
-          <h3 className="text-2xl font-bold text-yellow-400">
-            Graphic & Logo Design
-          </h3>
-          <p className="mt-3 text-gray-400">
-            Logos, posters, banners and social media designs.
-          </p>
-        </div>
-
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.15)] transition-all duration-300">
-            <FileEdit size={40} className="text-yellow-400 mb-4" />
-          <h3 className="text-2xl font-bold text-yellow-400">
-            PDF Editing & Typing
-          </h3>
-          <p className="mt-3 text-gray-400">
-            PDF editing, formatting and typing work.
-          </p>
-        </div>
-
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.15)] transition-all duration-300">
-            <Printer size={40} className="text-yellow-400 mb-4" />
-          <h3 className="text-2xl font-bold text-yellow-400">
-            Printing & Spiral Binding
-          </h3>
-          <p className="mt-3 text-gray-400">
-            Printing, spiral binding and project preparation.
-          </p>
-        </div>
+              <a
+                href={whatsappOrder(item.service)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block w-full text-center bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 rounded-xl transition-all duration-300"
+              >
+                Order Now →
+              </a>
+            </div>
+          );
+        })}
 
       </div>
     </section>

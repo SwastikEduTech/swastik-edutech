@@ -13,22 +13,53 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Swastik EduTech | Resume, Website & Graphic Design Services",
+  title: {
+    default: "Swastik EduTech",
+    template: "%s | Swastik EduTech",
+  },
+
   description:
-    "Swastik EduTech provides professional Resume Design, Website Development, PowerPoint, Graphic Design, Logo Design, PDF Editing, Printing and other digital services.",
+    "Affordable digital services including Resume Design, Logo Design, Website Development, PowerPoint Presentation, PDF Editing, Printing, Spiral Binding and more.",
 
   keywords: [
     "Resume Design",
-    "Website Development",
-    "Graphic Design",
-    "PowerPoint",
+    "CV Design",
     "Logo Design",
+    "Poster Design",
+    "Certificate Design",
+    "PowerPoint Presentation",
     "PDF Editing",
+    "Typing Work",
     "Printing",
+    "Spiral Binding",
+    "Website Development",
     "Swastik EduTech",
   ],
 
-  authors: [{ name: "Swastik EduTech" }],
+  authors: [{ name: "Sachin Gautam" }],
+
+  creator: "Swastik EduTech",
+
+  metadataBase: new URL("https://YOUR-DOMAIN.vercel.app"),
+
+  openGraph: {
+    title: "Swastik EduTech",
+    description:
+      "Professional Digital Services for Students & Professionals.",
+    url: "https://YOUR-DOMAIN.vercel.app",
+    siteName: "Swastik EduTech",
+    locale: "en_IN",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

@@ -2,17 +2,16 @@ export default function Footer() {
   return (
     <footer className="bg-zinc-950 border-t border-zinc-800 py-12 px-8">
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
         <div>
           <h2 className="text-3xl font-bold text-yellow-400">
             Swastik EduTech
           </h2>
 
-          <p className="text-gray-400 mt-4">
-            Professional Digital Services for Students &
-            Professionals.
-          </p>
+          <p className="text-gray-400 mt-4 leading-7">
+  We provide affordable and high-quality digital services including Resume Design, Logo Design, Website Development, PowerPoint Presentations and much more.
+</p>
         </div>
 
         <div>
@@ -20,12 +19,36 @@ export default function Footer() {
             Quick Links
           </h3>
 
-          <ul className="space-y-2 text-gray-400">
-            <li><a href="#">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <ul className="space-y-3">
+           <li>
+  <a href="#home" className="text-gray-400 hover:text-yellow-400 transition">
+    Home
+  </a>
+</li>
+
+<li>
+  <a href="#services" className="text-gray-400 hover:text-yellow-400 transition">
+    Services
+  </a>
+</li>
+
+<li>
+  <a href="#portfolio" className="text-gray-400 hover:text-yellow-400 transition">
+    Portfolio
+  </a>
+</li>
+
+<li>
+  <a href="#pricing" className="text-gray-400 hover:text-yellow-400 transition">
+    Pricing
+  </a>
+</li>
+
+<li>
+  <a href="#contact" className="text-gray-400 hover:text-yellow-400 transition">
+    Contact
+  </a>
+</li>
           </ul>
         </div>
 
