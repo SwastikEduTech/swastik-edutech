@@ -23,7 +23,7 @@ export default function Hero() {
           className="mb-8 drop-shadow-[0_0_25px_rgba(250,204,21,0.5)]"
         />
 
-        <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-transparent">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-transparent">
           Swastik EduTech
         </h1>
 

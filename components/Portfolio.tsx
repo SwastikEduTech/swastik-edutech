@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { whatsappOrder } from "../lib/whatsapp";
 
@@ -110,14 +112,12 @@ export default function Portfolio() {
   {item.description}
 </p>
 
-                <a
-                  href={whatsappOrder(item.service)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-xl transition"
-                >
-                  Order Now →
-                </a>
+                <button
+  onClick={() => window.open(whatsappOrder(item.service), "_blank")}
+  className="mt-6 inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-6 py-3 rounded-xl transition"
+>
+  Order Now →
+</button>
 
               </div>
 
