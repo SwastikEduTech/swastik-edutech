@@ -40,13 +40,13 @@ export const metadata: Metadata = {
 
   creator: "Swastik EduTech",
 
-  metadataBase: new URL("https://YOUR-DOMAIN.vercel.app"),
+  metadataBase: new URL("https://swastik-edutech-xphq.vercel.app"),
 
   openGraph: {
     title: "Swastik EduTech",
     description:
       "Professional Digital Services for Students & Professionals.",
-    url: "https://YOUR-DOMAIN.vercel.app",
+    url: "https://swastik-edutech-xphq.vercel.app",
     siteName: "Swastik EduTech",
     locale: "en_IN",
     type: "website",
